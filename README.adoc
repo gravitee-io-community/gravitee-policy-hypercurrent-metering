@@ -1,0 +1,26 @@
+= HyperCurrentMetering Gravitee Policy
+
+ifdef::env-github[]
+image:https://ci.gravitee.io/buildStatus/icon?job=gravitee-io/hypercurrent-metering-policy/master["Build status", link="https://ci.gravitee.io/job/gravitee-io/job/hypercurrent-metering-policy/"]
+image:https://badges.gitter.im/Join Chat.svg["Gitter", link="https://gitter.im/gravitee-io/gravitee-io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"]
+endif::[]
+
+Building:
+
+```
+mvn -Dlicense.skip  clean package
+```
+
+Deploying
+```
+scp -i "~/Downloads/gravitee-poc.pem"  target/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip admin@34.204.194.36:
+```
+
+```
+cp /home/admin/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip  plugins/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip
+```
+
+```
+cp /home/admin/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip  management-plugins/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip
+```
+

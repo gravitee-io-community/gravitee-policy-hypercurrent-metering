@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "id": "urn:jsonschema:io:gravitee:policy:callout:configuration:HyperCurrentMeteringPolicyConfiguration",
+  "properties": {
+    "meteringUrl": {
+      "title": "HyperCurrent Metering API URL",
+      "description": "The Metering API URL for the HyperCurrent Platform.",
+      "type": "string",
+      "default": "https://api.hypercurrent.io/meter/v1/api"
+    },
+    "apiKey": {
+      "title": "The HyperCurrent API Key",
+      "description": "The HyperCurrent API Key",
+      "type": "string"
+    },
+    "meteringHeaderExpression": {
+      "title": "The expression to extract the metering header from the request",
+      "description": "The expression to extract the metering header from the request",
+      "type": "string"
+    },
+    "metadataHeaderExpression": {
+      "title": "The expression to extract the metadata header from the request",
+      "description": "The backend response HTTP header name",
+      "type": "string"
+    },
+    "activeMode": {
+      "title": "Reject Requests with Invalid Product Keys",
+      "description": "Actively reject API requests with invalid (expired, out of funds, etc) Product Key or Client ID headers",
+      "type": "boolean"
+    },
+    "productKeyCacheTTL": {
+      "title": "Product Key Cache TTL (Minutes)",
+      "description": "The amount of time to cache an valid Product Keys",
+      "type": "number"
+    },
+    "successExpression": {
+      "title": "Success Expression",
+      "description": "An expression to evaluate whether an API response should be metered",
+      "type": "string"
+    }
+  }
+}
