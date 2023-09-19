@@ -11,16 +11,3 @@ Building:
 mvn -Dlicense.skip  clean package
 ```
 
-Deploying
-```
-scp -i "~/Downloads/gravitee-poc.pem"  target/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip admin@34.204.194.36:
-```
-
-```
-cp /home/admin/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip  plugins/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip
-```
-
-```
-cp /home/admin/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip  management-plugins/hypercurrent-metering-policy-1.0.0-SNAPSHOT.zip
-```
-
